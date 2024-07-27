@@ -63,7 +63,7 @@ class ChatConversation:
             result = new_chat_info
         else:
             try:
-                response = self.chat.send_message(prompt)
+                response = self.chat.send_message(用繁體中文和台灣用字回應)
                 result = response.text
             except Exception as e:
                 result = f"{gemini_err_info}\n{repr(e)}"
