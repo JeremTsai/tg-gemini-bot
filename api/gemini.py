@@ -5,6 +5,8 @@ import PIL.Image
 
 from .config import GOOGLE_API_KEY, generation_config, safety_settings, gemini_err_info, new_chat_info
 
+prompt = 用繁體中文和台灣用字回覆
+
 genai.configure(api_key=GOOGLE_API_KEY[0])
 
 model_usual = genai.GenerativeModel(
@@ -63,7 +65,7 @@ class ChatConversation:
             result = new_chat_info
         else:
             try:
-                response = self.chat.send_message(用繁體中文和台灣用字回應)
+                response = self.chat.send_message(prompt)
                 result = response.text
             except Exception as e:
                 result = f"{gemini_err_info}\n{repr(e)}"
