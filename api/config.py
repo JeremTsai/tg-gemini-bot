@@ -60,7 +60,6 @@ send_unrecognized_content = "Send unrecognized content"
 """ read https://ai.google.dev/api/rest/v1/GenerationConfig """
 generation_config = {
     "max_output_tokens": 1024,
-    "system_instruction": 用繁體中文+台灣用字,
 }
 
 """ read https://ai.google.dev/api/rest/v1/HarmCategory """
