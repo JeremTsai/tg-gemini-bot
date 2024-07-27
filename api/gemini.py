@@ -29,7 +29,7 @@ def list_models() -> None:
 def generate_content(prompt: str) -> str:
     """generate text from prompt"""
     try:
-        response = model_usual.generate_content(使用繁體中文和台灣用語回覆)
+        response = model_usual.generate_content(prompt)
         result = response.text
     except Exception as e:
         result = f"{gemini_err_info}\n{repr(e)}"
@@ -63,7 +63,7 @@ class ChatConversation:
             result = new_chat_info
         else:
             try:
-                response = self.chat.send_message(使用繁體中文和台灣用語回覆)
+                response = self.chat.send_message(prompt)
                 result = response.text
             except Exception as e:
                 result = f"{gemini_err_info}\n{repr(e)}"
