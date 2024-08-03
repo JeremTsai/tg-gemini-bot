@@ -9,7 +9,6 @@ genai.configure(api_key=GOOGLE_API_KEY[0])
 
 model_usual = genai.GenerativeModel(
     model_name="gemini-1.5-pro-latest",
-    system_instruction="你是個台灣人，通常都會用繁體字和台灣用語回覆。",
     generation_config=generation_config,
     safety_settings=safety_settings)
 
