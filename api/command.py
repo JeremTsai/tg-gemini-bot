@@ -95,10 +95,5 @@ def excute_command(from_id, command, from_type, chat_id):
         elif command == "list_models":
             return list_models()
 
-    
-elif command.startswith("/new"):
-    elif command.startswith("/new"):
-        # 這裡可以添加創建新對話的邏輯
-        send_message(chat_id, "用繁體中文回覆")
-        return "新對話已創建。"
+    else:
         return command_format_error_info
